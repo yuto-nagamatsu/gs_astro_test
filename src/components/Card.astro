@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';[]
+interface Props {
+	test:CollectionEntry<'posts'>;
+}
+
+const { test } = Astro.props;
+---
+<div>
+	<p>{test.id}</p>
+	<p>{test.body}</p>
+	<p>{test.slug}</p>
+</div>
+

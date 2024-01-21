@@ -1,0 +1,57 @@
+---
+// この中に使用するファイルを書いたりJsの処理を書く
+import { Image } from "astro:assets";
+import Test from '../img/logo.svg';
+// import Test2 from '../../publicfavicon.svg'
+
+---
+
+<header class="header">
+    <div class="inner">
+    <Image src={Test} alt="" />
+    <!-- <Image src={Test2} alt=""/> -->
+
+    <ul>
+        <li><a href="">TOP</a></li>
+        <li><a href="">News</a></li>
+    </ul>
+    </div>
+</header>
+
+<style>
+    .header{
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .header{
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header ul {
+        display: flex;
+    }
+
+    .header li {
+        list-style-type: none;
+    }
+
+    .header li a {
+        padding: 0 5px;
+        color: #000;
+        text-decoration: none;
+        transition: all .3s;
+    }
+
+    .header li a:hover{
+        opacity: .3;
+    }
+
+</style>

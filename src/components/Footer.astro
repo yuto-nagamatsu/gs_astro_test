@@ -1,0 +1,30 @@
+---
+// この中に使用するファイルを書いたりJsの処理を書く
+import { Image } from "astro:assets";
+import Test from '../img/logo.svg';
+
+---
+
+<header class="header">
+    <div class="inner">
+    <Image src={Test} alt="" />
+
+    <ul>
+        <li><a href="">TOP</a></li>
+        <li><a href="">News</a></li>
+    </ul>
+    </div>
+</header>
+
+<style>
+.footer{
+    background:#f2f2f2;
+    padding: 60px 0 70px;
+}
+
+img{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+</style>

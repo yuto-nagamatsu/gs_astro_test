@@ -1,0 +1,41 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+// import Card from '../components/Card.astro';
+
+import { getCollection } from 'astro:content';
+const allPosts = await getCollection("posts");
+console.log(allPosts,"allPosts");
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="mv">
+			<h2>世界を変える<br>geekになろう</h2>
+		</div>
+
+		<div class="blog">
+			<h3>記事の内容</h3>
+			{allPosts.map((data,index) => (
+				<Card test={data}/>
+				// <div>
+				// 	<p>{data.id}</p>
+				// 	<p>{data.body}</p>
+				// 	<p>{data.data.title}</p>
+				// </div>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.mv{
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-style: 20px;
+		font-weight: bold;
+	}
+</style>
