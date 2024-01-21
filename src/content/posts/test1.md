@@ -1,7 +1,7 @@
 ---
-title:"astroの授業やってますよ"
-pubDates:"2023-01-21"
-description:"今日は３回目の授業です"
+title: "astroの授業やってますよ"
+pubDates: "2023-01-21"
+description: "今日は３回目の授業です"
 
 ---
 
